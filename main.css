@@ -145,12 +145,52 @@ header .navbar ul li a:hover{
     font-size: 2.5rem;
     color: #fff;
 }
-.home h1{
-    font-size: 5rem;
-    color: #fff;
+.home .wrapper{
+    display: inline-flex;
 }
-.home h1 span{
+.home .wrapper .dynamic-txt{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 400;
+}
+.home .wrapper .dynamic{
+    margin-left: 15px;
+    height: 80px;
+    line-height: 80px;
+    overflow: hidden;
+}
+.home li {
     color: var(--yellow);
+    list-style: none;
+    font-size: 40px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+    100%{
+        top: -320px;
+    }
+}
+.home li span{
+    position: relative;
+}
+.home li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #111;
+    border-left: 2px solid var(--yellow);
+    animation: typing 3s steps(20) infinite;
+}
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
 }
 .home p{
     font-size: 2rem;
